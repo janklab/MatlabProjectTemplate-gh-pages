@@ -62,15 +62,16 @@ MatlabProjectTemplate is multi-licensed under all of: MIT License, BSD 2-Clause 
 
 If you have a licensing scenario which is not covered by the above (and jeez, what are you doing that would require _that_?), just contact me, and I'll probably add support for it. My intention is that _everybody_ can use MatlabProjectTemplate.
 
+## More info
+
+* [Motivation](Motivation.html)
+* [User Guide](UserGuide.html)
+* [FAQ](FAQ.html)
+* [Writing Documentation](WritingDocumentation.html)
+* [Creating Releases](Releasing.html)
+
 ## About MatlabProjectTemplate
 
-MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The project home page is <https://matlabprojecttemplate.janklab.net> and you can find the repo at <https://github.com/janklab/MatlabProjectTemplate>. You can get support, or even contribute to the project, there. Bug reports, feature requests, and other feedback are welcome.
+MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The project has a [web site](https://matlabprojecttemplate.janklab.net) and you can find a [repo on GitHub](https://github.com/janklab/MatlabProjectTemplate). You can get support, or even contribute to the project, there. Bug reports, feature requests, and other feedback are welcome.
 
-See the [FAQ](FAQ.html) or the stuff in the `MatlabProjectTemplate/doc` directory for more info.
-
-More doco:
-
-* [FAQ](FAQ.html)
-* [User Guide](UserGuide.html)
-* [Writing Documentation](WritingDocumentation.html)
-
+MatlabProjectTemplate is part of the [Janklab](https://janklab.net) suite of libraries for Matlab.
