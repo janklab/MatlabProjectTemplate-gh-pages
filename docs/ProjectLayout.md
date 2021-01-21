@@ -72,51 +72,51 @@ I'm really sorry for having both `doc` and `docs`; that's confusing. I had to us
 
 ## Details
 
-### `Mcode`
+### Mcode
 
 This is the core of your project: where your Matlab source code goes! This is what will end up on the Matlab path for people using your project.
 
-### `Mcode/+mycoolpackage`
+### Mcode/+mycoolpackage
 
 The top-level package for your project. All your code should go inside a package, to prevent name collisions with other people's code. This makes it feasible to use multiple projects in a Matlab environment.
 
 The code that users of your package will use – that is, the public API of your package – goes directly in here. If you have a really large package, you might want to break it out in to subpackages.
 
-### `Mcode/+mycoolpackage/+examples`
+### Mcode/+mycoolpackage/+examples
 
 Example code that ships with your package. This is different from the top-level `/examples/` in that code here is stuff you want to always be available at run time when someone has your package loaded in to Matlab. The `/examples` stuff is more documentation-oriented, and the user has to pull that in separately.
 
-### `Mcode/+mycoolpackage/+internal`
+### Mcode/+mycoolpackage/+internal
 
 Code for internal use by your package. This is a safe space to put stuff that is not part of your public API, and is undocumented and subject to change at any time, and you don't want users calling directly.
 
-### `Mcode/+mycoolpackage/+logger`
+### Mcode/+mycoolpackage/+logger
 
 Support for [SLF4M](https://github.com/janklab/SLF4M)-compatible logging that's built in to your package. We do it this way so you don't have to take a dependency on SLF4M, because managing dependencies in Matlab is kind of a pain, and can lead to DLL Hell.
 
-### `Mcode/+mycoolpackage/+test`
+### Mcode/+mycoolpackage/+test
 
 Your unit tests go here. You're going to write unit tests, right?
 
 Author your unit tests using the [Matlab Unit Test Framework](https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html).
 
-### `Mcode/+mycoolpackage/globals.m`
+### Mcode/+mycoolpackage/globals.m
 
 Global state, settings, and info about your package. This is a central class to store an run-time settings and global state your package may have. It also allows clients of the package to programmatically query its version and location at run time.
 
 `Mcode/+mycoolpackage/Settings.m` is a structure for your package's settings that lives in a field on `globals`. It has to be a separate class because Matlab doesn't support mutable static class properties, only immutable `Constant` ones. So we use the trick of defining a separate mutable `handle` class for the settings structure, and sticking that in a `Constant` field on `globals`.
 
-### `MyCoolProject.prj.in` – Toolbox Packaging
+### MyCoolProject.prj.in – Toolbox Packaging
 
 The `MyCoolProject.prj.in`, `info.xml`, and `mycoolpackage_toolbox_info.m` files are used for packaging your project as a [Matlab Toolbox](https://www.mathworks.com/help/matlab/matlab_prog/create-and-share-custom-matlab-toolboxes.html).
 
 The project definition is supplied as a `.prj.in` file instead of a `.prj` file, because Matlab bakes _absolute_ file paths into its `.prj` files when you use the Toolbox packager. This is a flaw that makes `.prj` projects unsuitable for sharing between multiple developers, or even for use in different repo locations or on different OSes by a single developer. So we define a `.prj.in` file and then munge it into a `.prj` file at each build time.
 
-### `README.md`
+### README.md
 
 Summary info about your project. This is what any user will read first. It should have a summary of what your project does, how to install and use it, a quickstart guide and maybe some examples, and links to where to get more info and help.
 
-### `dev-kit`
+### dev-kit/
 
 These are the development tools for working with and building your project itself. They are for the internal use of your project's developers, and are not included in your package distribution.
 
@@ -133,11 +133,11 @@ What's in `dev-kit`:
 
 Building the MEX files is done manually by the developer at code authoring time, not as part of the package build process. This is because, unlike binary artifacts in many programming languages, MEX files should actually be kept in the source tree and checked in to the Git repo, so that your program can be run directly from the repo without going through a build step. Many users, and even many developers, may not have an environment capable of easily building MEX files.
 
-### `dist/`
+### dist/
 
 This is where the final packaged files ("release artifacts") for distribution show up. Your project's zip files and Matlab Toolbox `.mltbx` files will show up here.
 
-### `doc/`
+### doc/
 
 The built documentation for your project. This is what will be presented to your users, and is included in the distribution files.
 
@@ -147,7 +147,7 @@ See [Writing Documentation](WritingDocumentation.html) for more info.
 
 I'm really sorry for having both `doc` and `docs` directories; that's confusing. I had to use the name `docs` to be compatible with GitHub Pages. And `doc` is the only thing that makes sense to me for the final built documentation that goes into the distribution.
 
-### `docs/`
+### docs/
 
 Source files for the project documentation. This is the stuff you should edit.
 
@@ -155,27 +155,27 @@ This contains Markdown, AsciiDoc, and other document formats used by Jekyll or m
 
 See [Writing Documentation](WritingDocumentation.html) for more info.
 
-### `doc-project/`
+### doc-project/
 
 This is where you put internal developer-facing documentation for people working on your project itself. Things like code style guides, developer notes, a release checklist, and anything else documenting your development process go here.
 
-### `examples/`
+### examples/
 
 Code examples for presentation to your users.
 
 Because examples are useful for inclusion in your documentation, this folder is automatically copied into `docs/` by the `make doc-src` target.
 
-### `lib/`
+### lib/
 
 Third-party libraries that your package depends on.
 
 If your project has custom Java code, its JAR files will also go here, just as if it were an external library. (Because really, it kind of is.)
 
-### `lib/java`
+### lib/java
 
 The `lib/java/` subdirectory contains Java libraries. Each Java library should be in a `lib/java/<libname>` subdirectory, with all its `.jar` files immediately in that `<libname>` subdirectory. If you're using MatlabProjectTemplate's automatic library initialization feature, all the jars in all the libs here will be automatically added to the Matlab `javaclasspath` for you.
 
-### `lib/matlab`
+### lib/matlab
 
 External non-Toolbox Matlab libraries that you depend on and are redistributing with your package go here.
 
@@ -183,21 +183,21 @@ Each Matlab library should be in a `lib/matlab/<libname>` subdirectory here.
 
 There's no standard layout or loading mechanism for non-Toolbox Matlab libraries (until now! 😉), so the package initialization code uses some heuristics to guess where the M-code in these libraries is located and get it on the Matlab path. Basically, if you take a submission from File Exchange, unzip it, and drop the resulting directory in here, it'll probably work.
 
-### `lib/c`
+### lib/c
 
 C/C++ or other "native" libraries will go here.
 
 I haven't defined any further structure for this directory or how its contents will be loaded when your package is initialized. You'll have to write custom library-loading code in your package initialization for now. Suggestions are welcome!
 
-### `project_settings.sh`
+### project_settings.sh
 
 This is the configuration file you edit before running `init_project_from_template.sh` to define your basic project properties and metadata. It's not used after that, so you can throw it away once your project is initialized, but I'd keep it around just in case, because I'm like that. Who knows, maybe you'll need to re-run the project initialization if MatlabProjectTemplate is improved over time?
 
-### `src/`
+### src/
 
 This is all your project's custom source code in languages besides Matlab.
 
-### `src/java`
+### src/java
 
 Your project's custom Java code.
 
@@ -207,7 +207,7 @@ To build your Java code and install it in to your project's `lib/java`, run `mak
 
 Building your Java code should be done at code authoring time, not at project build time, because your M-code needs that JAR to run, and you should be able to run your code directly from the repo. For this same reason, the JAR for your custom Java code in `lib/java/MyCoolProject-java` _should_ be checked in to your Git repo.
 
-### `src/c`
+### src/c
 
 Source code for your C/C++ and other "native" libraries or programs will go here.
 
