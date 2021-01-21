@@ -4,7 +4,7 @@ title: Project Layout
 
 ## Overview
 
-Once you have initialized your project from the template (using `./init_project_from_template.sh`), you'll have a directory structure that looks like this:
+Once you have initialized your project from the template (using `./init_project_from_template`), you'll have a directory structure that looks like this:
 
 ```text
 ├── CHANGES.txt
@@ -191,7 +191,7 @@ I haven't defined any further structure for this directory or how its contents w
 
 ### project_settings.sh
 
-This is the configuration file you edit before running `init_project_from_template.sh` to define your basic project properties and metadata. It's not used after that, so you can throw it away once your project is initialized, but I'd keep it around just in case, because I'm like that. Who knows, maybe you'll need to re-run the project initialization if MatlabProjectTemplate is improved over time?
+This is the configuration file you edit before running `init_project_from_template` to define your basic project properties and metadata. It's not used after that, so you can throw it away once your project is initialized, but I'd keep it around just in case, because I'm like that. Who knows, maybe you'll need to re-run the project initialization if MatlabProjectTemplate is improved over time?
 
 ### src/
 
