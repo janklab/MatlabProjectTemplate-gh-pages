@@ -1,11 +1,15 @@
-title: MatlabProjectTemplate Documentation
+title: MatlabProjectTemplate
 email: andrew@apjanke.net
 description: Generate good project repo structures for Matlab software
 
 baseurl: "/"
 url: ""
 
-theme: jekyll-theme-cayman
+theme: minima
+header_pages:
+  - UserGuide.md
+  - WritingDocumentation.md
+  - FAQ.md
 
 github_username: janklab
 google_analytics: G-B6G2FLSWGL
