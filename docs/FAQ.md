@@ -4,7 +4,7 @@ title: FAQ
 
 ### Why does this require Mac or Linux to initialize the project?
 
-Because basic Windows sucks as a programming environment. It doesn't ship with any programming languages powerful enough to do even the basic text processing that basic project initialization requires.
+Because basic Windows sucks as a programming environment. It doesn't ship with any programming languages powerful enough to do even the basic text processing that our project initialization requires.
 
 This might change now that Powershell is becoming more widespread.
 
