@@ -1,5 +1,6 @@
 # Jekyll droppings
 _site/
+Gemfile.lock
 
 # Compiled class file
 *.class
