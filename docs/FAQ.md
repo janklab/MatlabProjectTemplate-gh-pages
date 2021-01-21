@@ -46,7 +46,7 @@ The top-level `dev-kit/` directory contains wrapper scripts for launching your t
 
 When interacting with this project on GitHub, you may see this warning:
 
-```bash
+```text
 remote: GitHub found 7 vulnerabilities on janklab/MatlabProjectTemplate's default branch (3 high, 4 moderate). To find out more,
 ```
 
