@@ -4,7 +4,7 @@ title: Project Layout
 
 ## Overview
 
-Once you have initialized your project from the template (using `./init_project_from_template`), you'll have a directory structure that looks like this:
+Once you have initialized your project from the MatlabProjectTemplate ("MPT") template (using `./init_project_from_template`), you'll have a directory structure that looks like this:
 
 ```text
 ├── CHANGES.txt
@@ -37,6 +37,8 @@ Once you have initialized your project from the template (using `./init_project_
 │   └── TODO.md
 ├── examples/
 ├── info.xml
+├── .matlab_version
+├── .mlproject.json
 ├── lib/
 │   ├── java/
 │   └── matlab/
@@ -64,6 +66,8 @@ The main bits are:
 * `doc/` – Where your _generated_ project documentation goes
 * `doc-project/` – Documentation for internal use by your project's developers
 * `examples/` – Code examples to go with your project
+* `.matlab_version` – The version of Matlab your project is targeting
+* `.mlproject.json` – Configuration file that sets MPT-related options, such as how your project is built
 * `lib/` – Third-party libraries you depend on
 * `project_settings.sh` – Settings used to initialize your project from the template
 * `src/` – Your non-Matlab custom source code
@@ -164,6 +168,18 @@ This is where you put internal developer-facing documentation for people working
 Code examples for presentation to your users.
 
 Because examples are useful for inclusion in your documentation, this folder is automatically copied into `docs/` by the `make doc-src` target.
+
+### .mlproject.json
+
+Project settings that control stuff like how your project is built.
+
+This is an MPT-defined file that I came up with, not a standard Matlab thing.
+
+### .matlab_version
+
+The central place defining what version of Matlab your project is targeting. This is the "source of truth"; the other places in the project's config files where the Matlab version appears are driven from this.
+
+This is an MPT-defined file that I came up with, not a standard Matlab thing.
 
 ### lib/
 
