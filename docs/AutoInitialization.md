@@ -48,3 +48,7 @@ Yep. Sorry. But I haven't come up with a better way of doing it yet.
 ## Toolboxes
 
 This isn't needed for Matlab Toolboxes, because they have hooks for startup code to run when the Toolbox is loaded. But you don't want your code to run _only_ as a Toolbox, do you? That would mean you needed to do a build and install step every time you changed your code and wanted to test it out! Because Toolboxes require build and installation, and Matlab doesn't have virtual environment support, they're not really suitable for use by developers. So use this auto-initialization trick instead of Toolbox startup code.
+
+## Acknowledgments
+
+Thanks to [David](https://github.com/FannoFlow) for helping me come up with this trick!
