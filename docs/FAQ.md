@@ -16,6 +16,8 @@ For example: the Matlab `.prj` file format for generating Matlab Toolbox `.mltbx
 
 And half the stuff in here is just about making decent documentation for your project; surely you want that!
 
+If you really feel overwhelmed by all the stuff in your project repo, you can run `make simplify` after initializing it. This will pare the repo down by removing some nonessential features, like continuous integration, custom Java code, and custom C code.
+
 ## Should I p-code my files?
 
 No. P-coding is a weak obfuscation mechanism and provides no other benefits. It's not strong enough to actually protect your intellectual property for proprietary software, and open source software shouldn't be obfuscated.
