@@ -4,7 +4,7 @@ title: MatlabProjectTemplate
 
 [![Travis Build Status](https://travis-ci.com/janklab/MatlabProjectTemplate.svg?branch=main)](https://travis-ci.com/github/janklab/MatlabProjectTemplate)  [![CircleCI Build Status](https://circleci.com/gh/janklab/MatlabProjectTemplate.svg?style=shield)](https://circleci.com/gh/janklab/MatlabProjectTemplate) [![Azure Build Status](https://dev.azure.com/janklab/MatlabProjectTemplate/_apis/build/status/janklab.MatlabProjectTemplate?branchName=main)](https://dev.azure.com/janklab/MatlabProjectTemplate/_build/latest?definitionId=1&branchName=main) [![View MatlabProjectTemplate on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/85840-matlabprojecttemplate)
 
-[MatlabProjectTemplate](https://github.com/janklab/MatlabProjectTemplate) is a template repo for creating Matlab library and application projects. It defines a "standard" project structure that should be suitable for many projects, including those intended for redistribution / open source.
+[MatlabProjectTemplate](https://github.com/janklab/MatlabProjectTemplate) is a template repo for creating Matlab library and application projects. It defines a "standard" project structure that should be suitable for many projects, including those intended for redistribution / open source. You can think of it as sort of a community-supported Reference Implementation for Matlab packages.
 
 It is suitable for both libraries and applications, and includes coding and organizational conventions that make it safe to use this project's code in a Matlab environment that uses code from other projects, too.
 
@@ -66,6 +66,7 @@ If you have a licensing scenario which is not covered by the above (and jeez, wh
 
 * [Motivation](Motivation.html)
 * [User Guide](UserGuide.html)
+* [Project Layout](ProjectLayout.html)
 * [FAQ](FAQ.html)
 * [Writing Documentation](WritingDocumentation.html)
 * [Creating Releases](Releasing.html)
