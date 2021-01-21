@@ -16,6 +16,16 @@ Have a look around the modified source tree, and if things look good to you, com
 
 You're ready to start developing!
 
+## More info
+
+See also these pages:
+
+* [Project Layout](ProjectLayout.html)
+* [Writing Documentation](WritingDocumentation.html)
+* [Creating Releases](Releasing.html)
+* [Automatic Package Initialization](AutoInitialization.html)
+* [FAQ](FAQ.html)
+
 ## More stuff to go here
 
 TODO: add more content
