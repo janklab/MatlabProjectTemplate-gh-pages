@@ -67,9 +67,10 @@ If you have a licensing scenario which is not covered by the above (and jeez, wh
 * [Motivation](Motivation.html)
 * [User Guide](UserGuide.html)
 * [Project Layout](ProjectLayout.html)
-* [FAQ](FAQ.html)
 * [Writing Documentation](WritingDocumentation.html)
 * [Creating Releases](Releasing.html)
+* [Automatic Package Initialization](AutoInitialization.html)
+* [FAQ](FAQ.html)
 
 ## About MatlabProjectTemplate
 
