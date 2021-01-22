@@ -94,6 +94,14 @@ Example code that ships with your package. This is different from the top-level 
 
 Code for internal use by your package. This is a safe space to put stuff that is not part of your public API, and is undocumented and subject to change at any time, and you don't want users calling directly.
 
+### Mcode/+mycoolpackage/+internal/+util
+
+Little utility functions that wrap basic Matlab commands like `system` and `rmdir` with an exception-oriented interface, so you don't have to write return-value-checking code each time you call them. This makes it a lot more concise to write scripts and functions that do a sequence of filesystem operations or system calls.
+
+This stuff is written as a bunch of functions in a package (instead of static methods on a class) so you can do `import mycoolpackage.internal.util.*` in your code and get all of them. None of the names here collide with Matlab standard library functions, so it's safe to do so.
+
+Normally I wouldn't provide this much utility stuff in a simple project template, but I needed to supply them for `dev-kit`'s implementation anyway, and all Matlab code actually _should_ be using wrappers like this, so why not?
+
 ### Mcode/+mycoolpackage/+logger
 
 Support for [SLF4M](https://github.com/janklab/SLF4M)-compatible logging that's built in to your package. We do it this way so you don't have to take a dependency on SLF4M, because managing dependencies in Matlab is kind of a pain, and can lead to DLL Hell.
