@@ -34,8 +34,8 @@ NOTE: Don't "fork" or "clone" the MatlabProjectTemplate repo. That will leave yo
 Then:
 
 * Add a license file!
-* Edit the variables `project_settings.sh`.
-* Run `init_project_from_template`.
+* Edit the variables `project_settings.m`.
+* Run `init_project_from_template.m` in Matlab.
 * Edit `.editorconfig` to reflect your preferred code style.
 * Edit `<myproject>.prj.in` and put in all your contact and descriptive info and other stuff.
 
@@ -52,7 +52,9 @@ See the [User Guide](UserGuide.md) for more information and details.
 
 ## Requirements
 
-Some features, including project initialization, only work on Mac and Linux. But don't worry! If you're on Windows, just install [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and use that.
+Just Matlab, for most of it.
+
+Some features (some doc building/previewing, and custom Java code builds) only work on Mac and Linux. But don't worry! If you're on Windows, you can install [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and use that.
 
 See [Using on Windows](Windows.html) for details.
 

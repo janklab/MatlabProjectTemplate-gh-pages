@@ -2,7 +2,7 @@
 title: Using on Windows
 ---
 
-MatlabProjectTemplate mostly works out of the box on Windows. But some of its features don't, because base Windows lacks the Unix development tools 
+MatlabProjectTemplate mostly works out of the box on Windows. But some of its features don't, because base Windows lacks the Unix development tools that some of the build steps use.
 
 ## Building and previewing documentation
 

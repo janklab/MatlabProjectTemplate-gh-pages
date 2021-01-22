@@ -10,11 +10,16 @@ Name your new repo after your project name. This will be visible to your end use
 
 Once the new repo is created, clone it to your local machine, and edit the `project_settings.sh` file to define your project's basic properties and metadata.
 
-Then open up a shell session in a terminal, and run `./init_project_from_template`.
+Then open Matlab, `cd` to the repo, and run `init_project_from_template`.
 
 Have a look around the modified source tree, and if things look good to you, commit the changes with `git add -A; git commit -a -m 'Project initialization from MatlabProjectTemplate` and do a `git push`.
 
-You're ready to start developing!
+You're ready to start developing! Next steps:
+
+* Put your main Matlab source code in `Mcode/`.
+* Put your example scripts in `examples/`.
+* Edit the files in `doc-project/` to reflect your plans.
+* Hack away!
 
 ## What not to do
 
