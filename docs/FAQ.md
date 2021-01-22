@@ -10,9 +10,11 @@ This might change now that Powershell is becoming more widespread.
 
 ### Why is there _so much stuff_ in this? It's supposed to be a "basic" template!
 
-Well: Matlab is a great tool, but as a programming language, its software development toolchain is somewhat anemic, and is oriented towards manual, interactive use. So your project has to fill in the gaps.
+Well: Matlab is a great tool, but as a programming language, its software development toolchain is somewhat anemic, and is oriented towards manual, interactive use. Plus its basic file IO API hs problems. So your project has to fill in the gaps.
 
 For example: the Matlab `.prj` file format for generating Matlab Toolbox `.mltbx` files has a design flaw that bakes in _absolute_ paths to your source code in the `.prj` file, which makes it unusable for projects with multiple developers. So we have to add in an additional layer to dynamically generate the `.prj` file from a `.prj.in` file and `package_toolbox`. And the Matlab Compiler and Toolbox builder both require you to have your project on the Matlab path and initialized, so we need to add in a layer of launcher scripts that can do that from the command line.
+
+As far as Matlab itself, the `fopen`, `copyfile`, `rmdir` functions all return status codes instead of raising an `error()` on failure, which means you need to write a lot of return-value-checking code if you use them directly. You really need to have exception-oriented wrappers for all of them if you want to write concise, correct code.
 
 And half the stuff in here is just about making decent documentation for your project; surely you want that!
 
