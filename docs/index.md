@@ -54,6 +54,8 @@ See the [User Guide](UserGuide.md) for more information and details.
 
 Some features, including project initialization, only work on Mac and Linux. But don't worry! If you're on Windows, just install [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and use that.
 
+See [Using on Windows](Windows.html) for details.
+
 ## Unit tests
 
 You should write unit tests for your project! Use the [Matlab Unit Test Framework](https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html) and put your tests in `Mcode/+<myproject>/+test`. Run them with `make test` in the shell or with `dev-kit/launchtests.m` in Matlab.

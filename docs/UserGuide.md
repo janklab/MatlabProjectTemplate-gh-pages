@@ -33,6 +33,7 @@ See also these pages:
 * [Creating Releases](Releasing.html)
 * [Automatic Package Initialization](AutoInitialization.html)
 * [FAQ](FAQ.html)
+* [Using on Windows](Windows.html)
 
 ## More stuff to go here
 
